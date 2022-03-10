@@ -1,0 +1,31 @@
+{
+  "name": "nft-zombies",
+  "version": "1.0.0",
+  "description": "A crypto NFT game",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "keywords": [
+    "nft",
+    "zombies",
+    "crypto",
+    "web3",
+    "truffle",
+    "solidity",
+    "react",
+    "reactjs"
+  ],
+  "author": "BFYDigital",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.5.0",
+    "@truffle/hdwallet-provider": "^2.0.3"
+  },
+  "devDependencies": {
+    "truffle-test-utils": "^0.1.0"
+  }
+}
