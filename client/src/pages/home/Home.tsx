@@ -59,8 +59,6 @@ const Home = () => {
         let isReady = await dapp.zombieContract?.methods.isReady(parsedId, currentTimestamp).call();
         let hungerLevel = await dapp.zombieContract?.methods.getHungerLevel(parsedId, currentTimestamp).call();
 
-        console.log(hungerLevel);
-
         let zombie: IZombie = {
           id: parsedId,
           cooldownTime: parseInt(result.cooldownTime),
