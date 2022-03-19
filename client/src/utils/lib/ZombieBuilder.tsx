@@ -34,7 +34,7 @@ export default class ZombieBuilder {
     this.loadImages();
   }
 
-  private loadImages() {
+  private async loadImages() {
     for (let i = 0; i < this.zombieParts.length; i++) {
       let zombiePart: IZombiePart = this.zombieParts[i];
       let image = new Image();
@@ -64,7 +64,8 @@ export default class ZombieBuilder {
 
       let bodyPart = zombiePart.bodyPart;
       let num = zombiePart.gene;
-      image.src = require(`../../assets/images/zombies/${bodyPart}_${num}.png`);
+
+      image.src = (await import(/* @vite-ignore */ `../../assets/images/zombies/${bodyPart}_${num}.png`)).default
     }
   }
 
