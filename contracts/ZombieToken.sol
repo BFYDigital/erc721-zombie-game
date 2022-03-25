@@ -95,7 +95,7 @@ contract ZombieToken is Ownable, ERC721, ERC721Enumerable {
         Zombie[] memory enemyZombies = new Zombie[](resultCount);
         uint256 j;
 
-        for (uint256 i = 0; i < enemyZombies.length; i++) {
+        for (uint256 i = 0; i <= enemyZombies.length; i++) {
             address ownerAddr = ownerOf(i);
             if (msg.sender != ownerAddr && ownerAddr != address(0)) {
                 enemyZombies[j] = zombies[i];
